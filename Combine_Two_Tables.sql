@@ -35,6 +35,7 @@ CREATE TABLE Address (
 -- =====================================================
 
 -- Insert sample persons
+
 INSERT INTO Person (personId, firstName, lastName) VALUES
 (1, 'Wang', 'Allen'),      -- Person without address
 (2, 'Alice', 'Bob'),        -- Person with address
