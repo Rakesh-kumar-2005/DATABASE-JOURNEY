@@ -87,17 +87,19 @@ ON
 -- Excludes Wang Allen and Jane Smith
 -- =====================================================
 
--- SELECT
---     p.firstName,
---     p.lastName,
---     a.city,
---     a.state
--- FROM
---     Person AS p
--- INNER JOIN
---     Address AS a
--- ON
---     p.personId = a.personId;
+SELECT '====================================================================='
+
+SELECT
+    p.firstName,
+    p.lastName,
+    a.city,
+    a.state
+FROM
+    Person AS p
+INNER JOIN
+    Address AS a
+ON
+    p.personId = a.personId;
 
 -- =====================================================
 -- ADDITIONAL USEFUL QUERIES
