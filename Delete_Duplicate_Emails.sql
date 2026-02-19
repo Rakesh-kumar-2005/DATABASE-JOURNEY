@@ -51,15 +51,15 @@ ON
     p1.email = p2.email         -- Match rows with same email
     AND p1.id > p2.id;          -- Delete larger id, keep smaller id
 
--- =====================================================
--- HOW IT WORKS:
--- =====================================================
+-- =====================================================      
+-- HOW IT WORKS:                                        
+-- =====================================================               
 -- STEP 1: Self-Join Matches
 --   p1.email = p2.email AND p1.id > p2.id
 --
 --   p1.id | p1.email          | p2.id | p2.email
 --   ------|-------------------|-------|------------------
---   3     | john@example.com  | 1     | john@example.com  ✅ DELETE
+--   3     | john@example.com  | 1     | john@example.com  ✅ DELETE   
 --
 -- STEP 2: DELETE p1
 --   Removes row with id=3 (larger id)
