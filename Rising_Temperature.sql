@@ -163,9 +163,9 @@ WHERE
 -- =====================================================
 
 -- Explanation:
--- ID 2: Jan 2 (25°) > Jan 1 (10°) ✅ Temperature rose
--- ID 3: Jan 3 (20°) < Jan 2 (25°) ❌ Temperature dropped
--- ID 4: Jan 4 (30°) > Jan 3 (20°) ✅ Temperature rose
+-- ID 2: Jan 2 (25°) > Jan 1 (10°) ✅ Temperature rose  
+-- ID 3: Jan 3 (20°) < Jan 2 (25°) ❌ Temperature dropped  
+-- ID 4: Jan 4 (30°) > Jan 3 (20°) ✅ Temperature rose  
 
 -- =====================================================
 -- EXECUTION BREAKDOWN
