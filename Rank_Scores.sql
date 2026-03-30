@@ -59,7 +59,7 @@ FROM Scores;
 --   3.50  | 4  ← Lowest
 
 -- =====================================================
--- KEY CONCEPTS
+-- KEY CONCEPTS  
 -- =====================================================
 -- DENSE_RANK(): Window function that assigns sequential ranks
 --   - Duplicate values get same rank
@@ -137,9 +137,9 @@ FROM Scores;
 --    Result: 1,1,3,4,4,6 (has gaps)
 --
 -- ❌ Forgetting DESC
---    Result: Lowest score gets rank 1 instead of highest
+--    Result: Lowest score gets rank 1 instead of highest   
 --
--- ❌ Using ROW_NUMBER()
+-- ❌ Using ROW_NUMBER()   
 --    Result: Duplicates get different ranks (loses tie information)
 
 -- =====================================================
