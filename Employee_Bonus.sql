@@ -1,10 +1,10 @@
 -- =====================================================
--- Employees with Bonus Less Than 1000 Query
+-- Employees with Bonus Less Than 1000 Query      
 -- =====================================================
 -- Purpose: Find employees with bonus < 1000 or no bonus at all
 -- Returns: Employee names and their bonus amounts (NULL if no bonus)
 -- Method: LEFT JOIN with WHERE filter for low/missing bonuses
--- Database: MS SQL Server (T-SQL)
+-- Database: MS SQL Server (T-SQL)      
 -- =====================================================
 
 -- Drop tables if they exist (for clean setup)
