@@ -33,8 +33,9 @@ INSERT INTO Employee (id, salary) VALUES
 -- =====================================================
 -- MAIN FUNCTION
 -- =====================================================
-
-CREATE FUNCTION getNthHighestSalary(@N INT) RETURNS INT AS
+-- Ensure the CREATE FUNCTION is the only statement in its batch
+GO
+CREATE FUNCTION dbo.getNthHighestSalary(@N INT) RETURNS INT AS
 BEGIN
     RETURN (
         SELECT MAX(salary) AS getNthHighestSalary
@@ -47,6 +48,7 @@ BEGIN
         WHERE rs = @N
     );
 END
+GO
 
 -- =====================================================
 -- HOW IT WORKS:

@@ -1,0 +1,108 @@
+/*
+===============================================================================
+DDL Script: Create Bronze Tables
+===============================================================================
+Script Purpose:
+    This script creates tables in the 'bronze' schema, dropping existing tables 
+    if they already exist.
+	  Run this script to re-define the DDL structure of 'bronze' Tables
+===============================================================================
+*/
+
+
+-- Dropping the bronze.crm_cust_info table if it exists...
+IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL
+    DROP TABLE bronze.crm_cust_info;
+GO
+
+-- Creating the bronze.crm_cust_info table...
+create table bronze.crm_cust_info
+(
+    cst_id                  int,
+    cst_key                 nvarchar(50),
+    cst_firstname           nvarchar(50),
+    cst_lastname            nvarchar(50),
+    cst_marital_status      nvarchar(50),
+    cst_gender              nvarchar(50),
+    cst_create_date         date
+);
+GO
+
+-- Dropping the bronze.crm_prd_info table if it exists...
+IF OBJECT_ID('bronze.crm_prd_info', 'U') IS NOT NULL
+    DROP TABLE bronze.crm_prd_info;
+GO
+
+-- Creating the bronze.crm_prd_info table...
+create table bronze.crm_prd_info
+(
+    prd_id          int,
+    prd_key         nvarchar(50),
+    prd_rim         nvarchar(50),
+    prd_cost        int,
+    prd_line        nvarchar(50),
+    prd_start_dt    datetime,
+    prd_end_dt      DATETIME
+);
+GO
+
+-- Dropping the bronze.crm_sales_details table if it exists...
+IF OBJECT_ID('bronze.crm_sales_details', 'U') IS NOT NULL
+    DROP TABLE bronze.crm_sales_details;
+GO
+
+-- Creating the bronze.crm_sales_details table...
+CREATE table bronze.crm_sales_details
+(
+    sts_ord_name    nvarchar(50),
+    sts_prd_key     nvarchar(50),
+    sts_cust_id     int,
+    sts_order_dt    int,
+    sts_ship_dt     int,
+    sts_due_dt      int,
+    sts_sales       int,
+    sts_quantity    int,
+    sts_price       int
+);
+GO
+
+-- Dropping the bronze.erp_loc_a101 table if it exists...
+IF OBJECT_ID('bronze.erp_loc_a101', 'U') IS NOT NULL
+    DROP TABLE bronze.erp_loc_a101;
+GO
+
+-- Creating the bronze.erp_loc_a101 table...
+create table bronze.erp_loc_a101
+(
+    cid     NVARCHAR(50),
+    cntry   NVARCHAR(50)
+);
+GO
+
+-- Dropping the bronze.erp_cust_az12 table if it exists...
+IF OBJECT_ID('bronze.erp_cust_az12', 'U') IS NOT NULL
+    DROP TABLE bronze.erp_cust_az12;
+GO
+
+create table bronze.erp_cust_az12
+(
+    cid     nvarchar(50),
+    bdate   date,
+    gen     nvarchar(50)
+);
+GO
+
+-- Dropping the bronze.erp_px_cat_g1v2 table if it exists...
+IF OBJECT_ID('bronze.erp_px_cat_g1v2', 'U') IS NOT NULL
+    DROP TABLE bronze.erp_px_cat_g1v2;
+GO
+
+-- Creating the bronze.erp_px_cat_g1v2 table...
+create table bronze.erp_px_cat_g1v2
+(
+    id           nvarchar(50),
+    cat          nvarchar(50),
+    subcat       nvarchar(50),
+    maintenance  nvarchar(50)
+);
+GO
