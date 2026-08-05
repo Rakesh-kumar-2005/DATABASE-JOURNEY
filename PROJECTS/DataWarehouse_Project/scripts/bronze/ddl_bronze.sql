@@ -23,7 +23,7 @@ create table bronze.crm_cust_info
     cst_firstname           nvarchar(50),
     cst_lastname            nvarchar(50),
     cst_marital_status      nvarchar(50),
-    cst_gender              nvarchar(50),
+    cst_gndr                nvarchar(50),
     cst_create_date         date
 );
 GO
@@ -38,7 +38,7 @@ create table bronze.crm_prd_info
 (
     prd_id          int,
     prd_key         nvarchar(50),
-    prd_rim         nvarchar(50),
+    prd_nm         nvarchar(50),
     prd_cost        int,
     prd_line        nvarchar(50),
     prd_start_dt    datetime,
@@ -54,15 +54,15 @@ GO
 -- Creating the bronze.crm_sales_details table...
 CREATE table bronze.crm_sales_details
 (
-    sts_ord_name    nvarchar(50),
-    sts_prd_key     nvarchar(50),
-    sts_cust_id     int,
-    sts_order_dt    int,
-    sts_ship_dt     int,
-    sts_due_dt      int,
-    sts_sales       int,
-    sts_quantity    int,
-    sts_price       int
+    sls_ord_num    nvarchar(50),
+    sls_prd_key     nvarchar(50),
+    sls_cust_id     int,
+    sls_order_dt    int,
+    sls_ship_dt     int,
+    sls_due_dt      int,
+    sls_sales       int,
+    sls_quantity    int,
+    sls_price       int
 );
 GO
 

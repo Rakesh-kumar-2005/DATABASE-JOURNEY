@@ -1,6 +1,6 @@
 /*
 ===============================================================================
-DDL Script: Create Silver Tables
+DDL Script: Create silver Tables
 ===============================================================================
 Script Purpose:
     This script creates tables in the 'silver' schema, dropping existing tables 
@@ -9,6 +9,7 @@ Script Purpose:
 ===============================================================================
 */
 
+-- Drop and Create silver.crm_cust_info table...
 IF OBJECT_ID('silver.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE silver.crm_cust_info;
 GO
@@ -25,6 +26,11 @@ CREATE TABLE silver.crm_cust_info (
 );
 GO
 
+PRINT 'silver.crm_cust_info table created successfully.';
+PRINT '================================================'
+
+
+-- Drop and Create silver.crm_prd_info table...
 IF OBJECT_ID('silver.crm_prd_info', 'U') IS NOT NULL
     DROP TABLE silver.crm_prd_info;
 GO
@@ -42,6 +48,10 @@ CREATE TABLE silver.crm_prd_info (
 );
 GO
 
+PRINT 'silver.crm_prd_info table created successfully.';
+PRINT '================================================'
+
+-- Drop and Create silver.crm_sales_details table... 
 IF OBJECT_ID('silver.crm_sales_details', 'U') IS NOT NULL
     DROP TABLE silver.crm_sales_details;
 GO
@@ -60,6 +70,10 @@ CREATE TABLE silver.crm_sales_details (
 );
 GO
 
+PRINT 'silver.crm_sales_details table created successfully.';
+PRINT '================================================'
+
+-- Drop and Create silver.erp_loc_a101 table...
 IF OBJECT_ID('silver.erp_loc_a101', 'U') IS NOT NULL
     DROP TABLE silver.erp_loc_a101;
 GO
@@ -71,6 +85,10 @@ CREATE TABLE silver.erp_loc_a101 (
 );
 GO
 
+PRINT 'silver.erp_loc_a101 table created successfully.';
+PRINT '================================================'
+
+-- Drop and Create silver.erp_cust_az12 table...
 IF OBJECT_ID('silver.erp_cust_az12', 'U') IS NOT NULL
     DROP TABLE silver.erp_cust_az12;
 GO
@@ -83,6 +101,10 @@ CREATE TABLE silver.erp_cust_az12 (
 );
 GO
 
+PRINT 'silver.erp_cust_az12 table created successfully.';
+PRINT '================================================'
+
+-- Drop and Create silver.erp_px_cat_g1v2 table...
 IF OBJECT_ID('silver.erp_px_cat_g1v2', 'U') IS NOT NULL
     DROP TABLE silver.erp_px_cat_g1v2;
 GO
@@ -96,3 +118,5 @@ CREATE TABLE silver.erp_px_cat_g1v2 (
 );
 GO
 
+PRINT 'silver.erp_px_cat_g1v2 table created successfully.';
+PRINT '=================================================='
